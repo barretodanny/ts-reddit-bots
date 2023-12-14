@@ -12,3 +12,8 @@ def parse_weather_data(weather_data):
 
 def kelvin_to_celcius(kelvin):
     return kelvin - 273.15
+
+
+def parse_cat_fact_data(cat_fact_data):
+    cat_fact_data = json.loads(cat_fact_data)
+    return cat_fact_data["fact"]
