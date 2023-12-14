@@ -29,3 +29,12 @@ WEATHER_API_KEY = weather_api_profile["key"]
 
 def get_city_weather(city):
     return requests.get(f"{WEATHER_ENDPOINT}{city}&APPID={WEATHER_API_KEY}")
+
+
+##### CAT FACT API #####
+cat_fact_api_profile = read_config("config.ini", "cat_fact_api")
+CAT_FACT_ENDPOINT = cat_fact_api_profile["url"]
+
+
+def get_cat_fact():
+    return requests.get(CAT_FACT_ENDPOINT)
