@@ -1,9 +1,9 @@
 from bot import *
-from config import read_login_config
+from config import read_config
 from datetime import datetime
 
 # credentials for this bot
-login_profile = read_login_config("config.ini", "date_bot_login")
+login_profile = read_config("config.ini", "date_bot_login")
 email = login_profile["email"]
 password = login_profile["password"]
 

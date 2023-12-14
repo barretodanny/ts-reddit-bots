@@ -1,7 +1,7 @@
 import configparser
 
 
-def read_login_config(file_path, profile_name):
+def read_config(file_path, profile_name):
     config = configparser.ConfigParser()
     config.read(file_path)
 
