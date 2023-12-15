@@ -17,3 +17,8 @@ def kelvin_to_celcius(kelvin):
 def parse_cat_fact_data(cat_fact_data):
     cat_fact_data = json.loads(cat_fact_data)
     return cat_fact_data["fact"]
+
+
+def parse_dog_fact_data(dog_fact_data):
+    dog_fact_data = json.loads(dog_fact_data)
+    return dog_fact_data["facts"][0]
