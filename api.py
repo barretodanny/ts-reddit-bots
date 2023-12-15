@@ -38,3 +38,12 @@ CAT_FACT_ENDPOINT = cat_fact_api_profile["url"]
 
 def get_cat_fact():
     return requests.get(CAT_FACT_ENDPOINT)
+
+
+##### DOG FACT API #####
+dog_fact_api_profile = read_config("config.ini", "dog_fact_api")
+DOG_FACT_ENDPOINT = dog_fact_api_profile["url"]
+
+
+def get_dog_fact():
+    return requests.get(DOG_FACT_ENDPOINT)
