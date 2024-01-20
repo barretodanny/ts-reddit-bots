@@ -47,3 +47,12 @@ DOG_FACT_ENDPOINT = dog_fact_api_profile["url"]
 
 def get_dog_fact():
     return requests.get(DOG_FACT_ENDPOINT)
+
+
+##### ANIME QUOTE API #####
+anime_quote_api_profile = read_config("config.ini", "anime_quote_api")
+ANIME_QUOTE_ENDPOINT = anime_quote_api_profile["url"]
+
+
+def get_anime_quote():
+    return requests.get(ANIME_QUOTE_ENDPOINT)

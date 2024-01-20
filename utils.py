@@ -22,3 +22,12 @@ def parse_cat_fact_data(cat_fact_data):
 def parse_dog_fact_data(dog_fact_data):
     dog_fact_data = json.loads(dog_fact_data)
     return dog_fact_data["facts"][0]
+
+
+def parse_anime_quote_data(anime_quote_data):
+    anime_quote_data = json.loads(anime_quote_data)
+    title = anime_quote_data["anime"]
+    character = anime_quote_data["character"]
+    quote = anime_quote_data["quote"]
+
+    return (title, character, quote)
