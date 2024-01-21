@@ -2,7 +2,7 @@ import requests
 from config import read_config
 
 ##### TS-REDDIT API #####
-ENDPOINT = "https://ts-reddit-rest-api.onrender.com/api"
+ENDPOINT = "http://localhost:1337/api"
 LOGIN_ENDPOINT = f"{ENDPOINT}/sessions"
 SUBREDDITS_ENDPOINT = f"{ENDPOINT}/subreddits"
 POSTS_ENDPOINT = f"{ENDPOINT}/posts"
@@ -65,3 +65,12 @@ CHUCKNORRIS_JOKE_ENDPOINT = chucknorris_joke_api_profile["url"]
 
 def get_chucknorris_joke():
     return requests.get(CHUCKNORRIS_JOKE_ENDPOINT)
+
+
+##### USELESS FACT API #####
+useless_fact_api_profile = read_config("config.ini", "useless_fact_api")
+USELESS_FACT_ENDPOINT = useless_fact_api_profile["url"]
+
+
+def get_useless_fact():
+    return requests.get(USELESS_FACT_ENDPOINT)

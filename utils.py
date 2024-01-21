@@ -36,3 +36,8 @@ def parse_anime_quote_data(anime_quote_data):
 def parse_chucknorris_joke_data(chucknorris_joke_data):
     chucknorris_joke_data = json.loads(chucknorris_joke_data)
     return chucknorris_joke_data["value"]
+
+
+def parse_useless_fact_data(useless_fact_data):
+    useless_fact_data = json.loads(useless_fact_data)
+    return useless_fact_data["text"]
