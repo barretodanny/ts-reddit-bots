@@ -41,3 +41,8 @@ def parse_chucknorris_joke_data(chucknorris_joke_data):
 def parse_useless_fact_data(useless_fact_data):
     useless_fact_data = json.loads(useless_fact_data)
     return useless_fact_data["text"]
+
+
+def parse_dad_joke_data(dad_joke_data):
+    dad_joke_data = json.loads(dad_joke_data)
+    return dad_joke_data["joke"]

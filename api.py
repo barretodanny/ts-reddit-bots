@@ -74,3 +74,12 @@ USELESS_FACT_ENDPOINT = useless_fact_api_profile["url"]
 
 def get_useless_fact():
     return requests.get(USELESS_FACT_ENDPOINT)
+
+
+##### DAD JOKE API #####
+dad_joke_api_profile = read_config("config.ini", "dad_joke_api")
+DAD_JOKE_ENDPOINT = dad_joke_api_profile["url"]
+
+
+def get_dad_joke():
+    return requests.get(DAD_JOKE_ENDPOINT, headers={"Accept": "application/json"})
