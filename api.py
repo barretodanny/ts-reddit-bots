@@ -83,3 +83,12 @@ DAD_JOKE_ENDPOINT = dad_joke_api_profile["url"]
 
 def get_dad_joke():
     return requests.get(DAD_JOKE_ENDPOINT, headers={"Accept": "application/json"})
+
+
+##### YO MAMA JOKE API #####
+yomama_joke_api_profile = read_config("config.ini", "yomama_joke_api")
+YOMAMA_JOKE_ENDPOINT = yomama_joke_api_profile["url"]
+
+
+def get_yomama_joke():
+    return requests.get(YOMAMA_JOKE_ENDPOINT)
