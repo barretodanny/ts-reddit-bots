@@ -58,6 +58,15 @@ def get_anime_quote():
     return requests.get(ANIME_QUOTE_ENDPOINT)
 
 
+##### JOKE API #####
+joke_api_profile = read_config("config.ini", "joke_api")
+JOKE_API_ENDPOINT = joke_api_profile["url"]
+
+
+def get_joke():
+    return requests.get(JOKE_API_ENDPOINT)
+
+
 ##### CHUCK NORRIS JOKE API #####
 chucknorris_joke_api_profile = read_config("config.ini", "chucknorris_joke_api")
 CHUCKNORRIS_JOKE_ENDPOINT = chucknorris_joke_api_profile["url"]
