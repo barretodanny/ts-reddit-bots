@@ -101,3 +101,12 @@ YOMAMA_JOKE_ENDPOINT = yomama_joke_api_profile["url"]
 
 def get_yomama_joke():
     return requests.get(YOMAMA_JOKE_ENDPOINT)
+
+
+##### POKEMON API #####
+pokemon_api_profile = read_config("config.ini", "random_pokemon_api")
+POKEMON_ENDPOINT = pokemon_api_profile["url"]
+
+
+def get_random_pokemon(n):
+    return requests.get(f"{POKEMON_ENDPOINT}{n}")

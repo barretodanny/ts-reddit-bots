@@ -56,3 +56,8 @@ def parse_dad_joke_data(dad_joke_data):
 def parse_yomama_joke_data(yomama_joke_data):
     yomama_joke_data = json.loads(yomama_joke_data)
     return yomama_joke_data["joke"]
+
+
+def parse_pokemon_data(pokemon_data):
+    pokemon_data = json.loads(pokemon_data)
+    return pokemon_data["species"]["name"]
