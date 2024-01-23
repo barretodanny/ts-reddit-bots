@@ -110,3 +110,12 @@ POKEMON_ENDPOINT = pokemon_api_profile["url"]
 
 def get_random_pokemon(n):
     return requests.get(f"{POKEMON_ENDPOINT}{n}")
+
+
+##### QUOTE API #####
+quote_api_profile = read_config("config.ini", "quote_api")
+QUOTE_ENDPOINT = quote_api_profile["url"]
+
+
+def get_random_quote():
+    return requests.get(QUOTE_ENDPOINT)
