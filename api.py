@@ -119,3 +119,12 @@ QUOTE_ENDPOINT = quote_api_profile["url"]
 
 def get_random_quote():
     return requests.get(QUOTE_ENDPOINT)
+
+
+##### ZEN QUOTE API #####
+zen_quote_api_profile = read_config("config.ini", "zen_quote_api")
+ZEN_QUOTE_ENDPOINT = zen_quote_api_profile["url"]
+
+
+def get_random_zen_quote():
+    return requests.get(ZEN_QUOTE_ENDPOINT)

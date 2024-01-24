@@ -66,3 +66,8 @@ def parse_pokemon_data(pokemon_data):
 def parse_quote_data(quote_data):
     quote_data = json.loads(quote_data)
     return (quote_data["content"], quote_data["author"])
+
+
+def parse_zen_quote_data(zen_quote_data):
+    zen_quote_data = json.loads(zen_quote_data)[0]
+    return (zen_quote_data["q"], zen_quote_data["a"])
