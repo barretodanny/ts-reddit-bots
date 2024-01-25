@@ -128,3 +128,12 @@ ZEN_QUOTE_ENDPOINT = zen_quote_api_profile["url"]
 
 def get_random_zen_quote():
     return requests.get(ZEN_QUOTE_ENDPOINT)
+
+
+##### STOIC QUOTE API #####
+stoic_quote_api_profile = read_config("config.ini", "stoic_quote_api")
+STOIC_QUOTE_ENDPOINT = stoic_quote_api_profile["url"]
+
+
+def get_random_stoic_quote():
+    return requests.get(STOIC_QUOTE_ENDPOINT)

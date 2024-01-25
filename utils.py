@@ -71,3 +71,8 @@ def parse_quote_data(quote_data):
 def parse_zen_quote_data(zen_quote_data):
     zen_quote_data = json.loads(zen_quote_data)[0]
     return (zen_quote_data["q"], zen_quote_data["a"])
+
+
+def parse_stoic_quote_data(stoic_quote_data):
+    stoic_quote_data = json.loads(stoic_quote_data)
+    return (stoic_quote_data["quote"], stoic_quote_data["author"])
